@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入作業</title>
+</head>
+<body>
+    <fieldset>
+        <legend>登入作業</legend>
+        <div>
+            <form method="post">
+                <table>
+                    <tr>
+                        <td>使用者帳號</td>
+                        <td><input type="text" name="userName"/></td>
+                    </tr>
+                    <tr>
+                        <td>密碼</td>
+                        <td><input type="password" name="password"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="登入"/>
+							<input type="button" value="無法登入？前往註冊" onclick="window.location.href='http://localhost:8080/member/add';"/>
+                        </td>
+                    </tr>
+                </table>
+                
+            </form>
+        </div>
+        <div><h3 th:text="${message}"></h3></div>
+    </fieldset>
+</body>
+</html>

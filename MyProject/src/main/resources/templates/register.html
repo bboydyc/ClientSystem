@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員註冊作業</title>
+</head>
+<body>
+    <fieldset>
+        <legend>會員註冊</legend>
+        <div>
+            <form method="post">
+                <table>
+                    <tr>
+                        <td>使用者帳號</td>
+                        <td><input type="text" name="userName"/></td>
+                    </tr>
+                    <tr>
+                        <td>使用者密碼</td>
+                        <td><input type="password" name="password"/></td>
+                    </tr>
+                    <tr>
+                        <td>真實姓名</td>
+                        <td><input type="text" name="realName"/></td>
+                    </tr>
+                    <tr>
+                        <td>EMAIL</td>
+                        <td><input type="text" name="email"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="reset" value="取消"/>
+                            <input type="submit" value="註冊"/>
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+        </div>
+		<!--渲染狀態 -->
+		<div>
+			<h4 th:text="${message}"></h4>
+		</div>
+    </fieldset>
+</body>
+</html>

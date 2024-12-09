@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>保單資料查詢-By身分證字號 </title>
+</head>
+<body>
+    <fieldset>
+        <legend>保單資料查詢</legend>
+        <div>
+            <!--設計表單-->
+            <form method="post">
+                <div>
+                    <label>保單號碼</label>
+                    <input type="text" required maxlength="20" name="insuranceId"/>
+                    <input type="submit" value="查詢"/>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+    <!--客戶資料查詢結果-->
+    <fieldset th:if="${result!=null}">
+        <legend>保單資料</legend>
+        <div>
+            <table>
+				<tr>
+					<td>保險公司:</td>
+					<td th:text="${result.companyName}"></td>
+				</tr>
+                <tr>
+                    <td>保單號碼:</td>
+                    <td th:text="${result.insuranceId}"></td>
+                </tr>
+                <tr>
+                    <td>保險名稱:</td>
+                    <td th:text="${result.insuranceName}"></td>
+                </tr>
+				<tr>
+				    <td>每年保費:</td>
+				    <td th:text="${result.insurancePremium} + ' 元'"></td>
+				</tr>
+                <tr>
+                    <td>保險保額:</td>
+                    <td th:text="${result.sumInsured}"></td>
+                </tr>
+				<tr>
+				     <td>繳費年期:</td>
+				     <td th:text="${result.insurancePayment}"></td>
+				 </tr>
+					<tr>
+				       <td>保障年期:</td>
+				         <td th:text="${result.benefitPeriod}"></td>
+				      </tr>
+                				
+            </table>
+        </div>
+    </fieldset>
+    <div th:text="${message}"></div>
+</body>
+</html>

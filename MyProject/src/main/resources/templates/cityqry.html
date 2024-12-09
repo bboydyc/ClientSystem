@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客戶查詢-By City</title>
+<style>
+	table, th, td {
+	    border: 1px solid black;
+	    border-collapse: collapse;
+	}
+
+	th, td {
+	    padding: 10px; /* 增加單元格內邊距 */
+	}
+
+	td {
+	    width: 20%; /* 設定每個單元格寬度，調整合適的比例 */
+	}
+</style>
+	
+</head>
+<body>
+    <fieldset>
+        <legend>以城市查詢客戶資料</legend>
+        <div>
+            <form method="post">
+                <div>
+                    <label>城市名</label>
+                   
+                    <select name="city">
+                        <option th:each="city :${city}" th:value="${city}" th:text="${city}"></option>
+                    </select>
+               
+                <input type="submit" value="查詢"/>
+            </div>
+            </form>
+        </div>
+    </fieldset>
+    <!--查詢結果區塊DOM Document Object Model-->
+    <fieldset th:if="${result!=null && result.size()>0}">
+        <legend>客戶資料清單</legend>
+        <div>
+			<table>
+			               <thead>
+			                   <tr>
+			                       <th>客戶身分證字號</th>
+			                       <th>客戶姓名</th>
+			                       <th>連絡電話</th>
+			                       <th>客戶電子郵件</th>
+			                       <th>客戶聯絡地址</th>
+			                   </tr>
+			               </thead>
+			               <tbody>
+			                   <tr th:each="client :${result}">
+			                       <td th:text="${client.clientId}"></td>
+			                       <td th:text="${client.clientName}"></td>
+			                       <td th:text="${client.phone}"></td>
+			                       <td th:text="${client.email}"></td>
+			                       <td th:text="${client.address}"></td>
+			                   </tr>
+			               </tbody>
+			           </table>
+        </div>
+    </fieldset>
+</body>
+</html>

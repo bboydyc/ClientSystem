@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Client</title>
+		<link rel="stylesheet" href="./css/client.css">
+	</head>
+	<body>
+		
+			<div>
+				<h1>客戶管理</h1>
+				
+				<!-- 新增客戶表單 -->
+				<h2>新增客戶</h2>
+				<div>
+					客戶編號:<input type="number" id="clientNum" name="clientNum" placeholder="請輸入客戶編號"></p>
+					客戶姓名:<input type="text" id="clientName" name="clientName" placeholder="請輸入客戶姓名"></p>
+					客戶身分證:<input type="text" id="clientId" name="clientId" placeholder="請輸入客戶身分證字號"></p>
+					客戶車牌:<input type="text" id="clientCar" name="clientCar" placeholder="請輸入客戶車牌"></p>
+					到期日:<input type="text" id="clientDay" name="clientDay" placeholder="請輸入到期日"></p>
+					保險公司:<input type="text" id="clientCompany" name="clientCpmpany" placeholder="請輸入所屬保險公司"></p>
+					保費:<input type="number" id="clientMoney" name="clientMoney" placeholder="請輸入保費"></p>
+					<button onclick="addClient()">新增</button>
+					<div id="addResult"></div>
+				</div>
+				
+				<!-- 客戶列表 -->
+				<h2>客戶列表</h2>
+				<ul id="clientList"></ul>
+			</div>
+			<!-- 修改房間表單Modal-->
+			<div class="modal-overlay" id="editModal">
+		        <div class="modal">
+		            <span class="close-btn" onclick="closeModal()">×</span>
+		            <h3>Edit Room</h3>
+		            客戶編號:<input type="text" id="editNum" style="width: 50px" disabled>
+		            <p />
+		            客戶姓名: <input type="text" id="editName" style="width: 100px" placeholder="請輸入客戶姓名">
+		            <p />
+		            客戶身分證: <input type="text" id="editId" style="width: 100px" placeholder="請輸入客戶身分證字號">
+		            <p />
+		            客戶車牌: <input type="text" id="editCar" style="width: 100px" placeholder="請輸入新的車牌">
+		            <p />
+		            到期日: <input type="text" id="editDay" style="width: 100px" placeholder="請輸入到期日">
+		            <p />
+		            保險公司: <input type="text" id="editCompany" style="width: 100px" placeholder="請輸入保險公司">
+		            <p />
+		            保費: <input type="number" id="editMoney" style="width: 50px" placeholder="請輸入保費">
+		            <p />
+		            <button onclick="confirmEdit()">確認修改</button>
+		        </div>
+		    </div>
+			
+			
+			<!-- 引入 js -->
+		<script src="./js/client.js"></script>
+	</body>
+</html>

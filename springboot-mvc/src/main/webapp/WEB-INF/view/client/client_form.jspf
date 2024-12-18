@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="cl" uri="http://www.springframework.org/tags/form" %>   
+<cl:form class="pure-form" modelAttribute="clientDTO" method="post" action="/client">
+	<fieldset>
+		<legend>客戶表單</legend>
+		<p>
+		客戶編號:<cl:input type="number" path="num"/>
+				 <cl:errors path="num" cssStyle="color: red"/>
+		</p>
+		<p>
+		客戶姓名:<cl:input type="text" 	 path="name"/>
+				 <cl:errors path="name" cssStyle="color: red"/>
+		</p>
+		<p>
+		身分證字號:<cl:input type="text" 	 path="id"/>
+				 <cl:errors path="id" cssStyle="color: red"/>
+		</p>
+		<p>
+		車牌號碼:<cl:input type="text"  path="car"/>
+				 <cl:errors path="car" cssStyle="color: red"/>
+		</p>
+		<p>
+		保險到期日:<cl:input type="text"  path="day"/>
+				 <cl:errors path="day" cssStyle="color: red"/>
+		</p>
+		<p>
+		公司名稱:<cl:input type="text" 	 path="company"/>
+				 <cl:errors path="company" cssStyle="color: red"/>
+		</p>
+		<p>
+		保費:<cl:input type="number"   path="money"/> 
+				 <cl:errors path="money" cssStyle="color: red"/>
+		</p>
+		<button type="submit" class="pure-button pure-button-primary" style="background-color: black; color: white;">
+    新增
+</button>
+			
+	</fieldset>
+</cl:form>

@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- Jakarta JSTL 表單標籤 -->
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
+<div class="pure-form">
+	<fieldset>
+		<legend>客戶列表</legend>
+		<table class="pure-table pure-table-striped">
+			<thead>
+		        <tr>
+		            <th>客戶編號</th>
+		            <th>客戶姓名</th>
+		             <th>身分證字號</th>
+		             <th>車牌號碼</th>
+		              <th>保險到期日</th> 
+		              <th>保險公司</th>
+		            <th>保費	</th>
+		            <th>編輯</th>
+		            <th>刪除</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		    	<c:forEach var="clientDTO" items="${ clientDTOs }">
+			        <tr>
+			            <td align="center">${ clientDTO.num }</td>
+			            <td align="left">${ clientDTO.name }</td>
+			            <td align="left">${ clientDTO.id }</td>
+			            <td align="left">${ clientDTO.car }</td>
+			            <td align="left">${ clientDTO.day }</td>
+			            <td align="left">${ clientDTO.company }</td>			         
+			            <td align="center">${ clientDTO.money } 元</td>
+			            <td align="center">
+			            	<a href="/client/${ clientDTO.num }" class="button-success pure-button">編輯</a>
+			            </td>
+			            <td align="center">
+			            	<a href="/client/delete/${ clientDTO.num }" class="button-error pure-button">刪除</a>
+			            </td>
+			        </tr>
+		        </c:forEach>
+		    </tbody>
+		</table>
+	</fieldset>	
+</div>    

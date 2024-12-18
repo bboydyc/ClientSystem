@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>功能列表</title>
+    <!--  <style>
+        /* 設定整體背景顏色和字體顏色 */
+        body {
+            background-color: #ffffff; /* 深藍色背景 */
+            
+            font-family: Arial, sans-serif; /* 字體樣式 */
+        }
+
+        /* 設定標題樣式 */
+        h1 {
+            text-align: center; /* 置中對齊 */
+            margin-top: 20px; /* 上方留白 */
+            color:black;
+        }
+
+        /* 設定連結的樣式 */
+        h2 a {
+            
+            text-decoration: none; /* 移除下劃線 */
+        }
+
+        h2 a:hover {
+            text-decoration: underline; /* 滑鼠移過時顯示下劃線 */
+        }
+    </style>-->
+</head>
+<body>
+<div style="background-color:grey; height:60px; display: flex; align-items: center; padding: 0 20px;">
+  <a href="http://localhost:5487">
+    <img src="/image/homepage.png" alt="回到首頁" style="width:60px; height:60px;">
+  </a> 
+  
+  <div style="display: flex; gap: 20px; justify-content: center; margin-left: 20px;">
+    <button onclick="window.location.href='http://localhost:5487/client'" style="padding: 10px 20px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+     維護客戶資料
+    </button>
+    <button onclick="window.location.href='http://localhost:5487/client/qry/byid'" style="padding: 10px 20px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+      以身分證查詢客戶車籍資料
+    </button>
+    <button onclick="window.location.href='http://localhost:5487/client/qry/bycarid'" style="padding: 10px 20px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+      以車牌查詢客戶車籍資料
+    </button>
+    <button onclick="window.location.href='http://localhost:5487/exchange'" style="padding: 10px 20px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+      線上兌換貨幣計算
+    </button>
+  </div>
+</div>
+<div>
+<img alt="系統圖" src="/image/pic.png" style="width:600px; height:600px;">
+</div>
+
+</body>
+</html>

@@ -10,14 +10,14 @@ import com.example.demo.model.entity.Client;
 @Component
 public class ClientMapper {
 	@Autowired
-	private ModelMapper modelMapper2;
+	private ModelMapper modelMapper;
 	
 	public ClientDTO toDTO(Client client) {
 		//entity轉dto
-		return modelMapper2.map(client, ClientDTO.class);
+		return modelMapper.map(client, ClientDTO.class);
 	}
 	public Client toEntity(ClientDTO clientDTO) {
 		//dto轉entity
-		return modelMapper2.map(clientDTO, Client.class);
+		return modelMapper.map(clientDTO, Client.class);
 	}
 }

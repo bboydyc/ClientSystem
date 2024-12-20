@@ -16,8 +16,7 @@ public class AppConfig2 {
 	@Bean
 	ModelMapper modelMapper2() {
 		ModelMapper modelMapper2 = new ModelMapper();
-		
-		// 自訂映射
+
 		// DTO -> Entity 映射規則
 		PropertyMap<ClientDTO, Client> clientMapRule1 = new PropertyMap<ClientDTO, Client>() { // 規則一
 			@Override

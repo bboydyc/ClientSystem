@@ -15,15 +15,15 @@ import com.example.demo.model.entity.Client;
 import com.example.demo.repository.ClientRepositoryJDBC;
 
 
-@Repository // 宣告一個 Repository 給 Spring 管理
+@Repository 
 @PropertySource("classpath:sql.properties") // 自動到 src/main/resources 找到 sql.properties
 public class ClientRepositoryJDBCImpl implements ClientRepositoryJDBC {
 	
-	@Autowired // 自動綁定(會自動採用 application.properties 有關於 spring.datasource 的設定資訊)
+	@Autowired 
 	private JdbcTemplate jdbcTemplate;
 	
 	// 會透過 Spring DI 技術將資料注入給指定變數
-	@Value("${client.sql.findAll}") // ${} SpringEL 語法 
+	@Value("${client.sql.findAll}") 
 	private String findAllSql;
 	
 	@Value("${client.sql.findById}")

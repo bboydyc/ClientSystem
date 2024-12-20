@@ -77,7 +77,7 @@ public class SingleClientController {
 						client.setClientMoney(rs.getInt("clientMoney"));
 											
 						message="";
-						queryTime = new Date(); // **記錄查詢成功的時間**
+						queryTime = new Date(); // 記錄查詢成功的時間
 						
 					}else {
 						System.out.println("查客戶資料");
@@ -93,7 +93,7 @@ public class SingleClientController {
 		
 		model.addAttribute("message", message);
 		model.addAttribute("result", client);
-		model.addAttribute("queryTime", queryTime); //將查詢時間傳遞到前端
+		model.addAttribute("queryTime", queryTime); 
 		return "client/singleClientQry";
 		}
 	}

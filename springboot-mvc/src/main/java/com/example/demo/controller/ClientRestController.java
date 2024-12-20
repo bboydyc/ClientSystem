@@ -27,7 +27,7 @@ import com.example.demo.service.ClientService;
 -----------------------------------------------------------------------------------------------------------------------------------------
 GET    /rest/clients       	     取得所有客戶列表      無                                  		        成功時返回所有客戶的列表及成功訊息。
 GET    /rest/client/{clientNum}  取得指定客戶資料    clientNum (路徑參數，客戶編號)            	        成功時返回指定客戶資料及成功訊息。
-POST   /rest/client              新增客戶資料          請求體包含 clientDto                   		        成功時返回成功訊息，無回傳資料。
+POST   /rest/client              新增客戶資料        請求體包含 clientDto                   		    成功時返回成功訊息，無回傳資料。
 PUT    /rest/client/{clientNum}  更新指定客戶資料    clientNum(路徑參數，客戶編號)，請求體包含clientDto     成功時返回成功訊息，無回傳資料。
 DELETE /rest/client/{clientNum}  刪除指定客戶        clientNum(路徑參數，客戶編號)                  	    成功時返回成功訊息，無回傳資料。
 */   
